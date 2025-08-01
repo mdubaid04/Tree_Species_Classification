@@ -169,4 +169,13 @@ Training and validation accuracy/loss curves are plotted for each model to evalu
 - The models are saved in HDF5 format (`tree_species_model.h5`, `basic_cnn_tree_species.h5`, `improved_cnn_model.h5`). Consider using the native Keras format (`.keras`) for future compatibility, as recommended by TensorFlow.
 - The `predict_tree_species` function referenced in `predict_multiple_images` is not defined in the script. Ensure it is available or implement it to load a model and predict on single images.
 - Adjust the `test_folder` path to test on different species.
-- The dataset includes a `.git` folder, which is excluded during processing but may be unnecessary. Consider
+- The dataset includes a `.git` folder, which is excluded during processing but may be unnecessary. Consider removing it from the ZIP file to reduce size.
+- The MobileNetV2 model assumes 31 classes, which should match the number of species in the dataset. Verify class counts to ensure consistency.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for bug fixes, enhancements, or additional features.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
